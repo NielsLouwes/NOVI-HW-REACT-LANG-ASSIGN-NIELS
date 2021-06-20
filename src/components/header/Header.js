@@ -26,7 +26,10 @@ function Header() {
                 {content[language].header.menuItems.allPlants}
               </NavLink>
               </li>
-            <li className="language-switch">
+            <li className="language-switch" onClick={() => {
+              language ? setLanguage("es") : setLanguage("nl");
+              // setLanguage("es");
+            }}>
               <p>{content[language].header.changeTo}</p>
               <FlagNL />
             </li>
@@ -34,7 +37,7 @@ function Header() {
         </nav>
         <div className="image-container">
           <img src={headerImage} alt="Header image plants" className="header-image" />
-          <h1>{content.nl.header.title}</h1>
+          <h1>{content[language].header.title}</h1>
         </div>
 
       </header>

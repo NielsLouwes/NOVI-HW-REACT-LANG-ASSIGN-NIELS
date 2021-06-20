@@ -1,11 +1,11 @@
 import React, {createContext, useState} from 'react';
 
-export const LanguageContext = createContext();
+export const LanguageContext = createContext({});
 
 export default function LanguageContextProvider(props) {
     console.log("PROPS IN LANG" , props);
 
-    const [language, setLanguage] = useState("es")
+    const [language, setLanguage] = useState("nl");
 
 
     return (
